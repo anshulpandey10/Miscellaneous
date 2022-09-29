@@ -1,0 +1,27 @@
+#include<iostream>
+#include<conio.h>
+main()
+{
+
+int array[]={3,6,7,76,43,86,34,43,56};
+int n=9;
+
+
+for(int j=n-1;j>=0;j--)
+{
+array[j]=array[j-1];
+
+}
+array[0]=-1;
+
+for(int i=0;i<n;i++)
+{
+printf("%d",array[i]);
+printf("\n");
+
+}
+
+
+
+
+}
