@@ -1,0 +1,62 @@
+#include<iostream>
+#include<conio.h>
+main()
+{
+    int queue[100],i,j,n,top=-1,choice=0;
+	
+
+void enqueue();
+void dequeue();
+main()
+{
+cout<<"Enter the number of elements";
+cin>>n;
+while(choice!=3)
+{
+
+cout<<"\nChoose One Option";
+cout<<"\n1.enqueue\n2.dequeue\n3.Exit";
+cin>>choice;
+switch(choice)
+{
+case 1:
+push();
+break;
+case 2:
+pop();
+break;
+case 3:
+cout<<"EXIT";
+break;
+default:
+cout<<"\nEnter valid choice";
+
+}
+}
+}
+}
+
+void enqueue()
+{
+int v;
+if(top==n)
+cout<<"\nOVERFLOW";
+else
+{
+cout<<"\nEnter the value";
+cin>>v;
+top=top+1;
+queue[top]=v;
+}
+}
+int front=0;
+void dequeue();
+{
+if(front==n)
+cout<<"UNDERFLOW";
+else
+front=front-1;
+}
+}
+
+}
