@@ -1,0 +1,84 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int main()
+{
+	
+	struct node
+	{
+		int data;
+		struct node *next;
+	};
+	
+	
+	struct node *head,*newnode,*temp;
+	int choice=1;
+	head=NULL;
+	while(choice)
+	{
+	
+	
+	newnode=(struct node*)malloc(sizeof(struct node));
+	printf("enter the data\n");
+	scanf("%d",&newnode->data);
+	newnode->next=NULL;
+	
+	if(head==NULL)
+	{
+		head=temp=newnode;		
+	}
+	else{
+		temp->next=newnode;
+		temp=newnode;
+		
+	}
+     printf("do you want to continue(0,1)\n");
+	 scanf("%d",&choice);
+	 	
+}
+
+   /////traverse when list is created/////////////
+   temp=head;
+   while(temp!=NULL)
+   {
+   	printf("%d",temp->data);
+   	temp=temp->next;
+   }
+   
+   /////////////insertion at the end//////////////
+   newnode=(struct node*)malloc(sizeof(struct node));
+    printf("Enter the element\n");
+	scanf("%d",&newnode->data);   
+      newnode->next=0;
+      
+      temp=head;
+      while(temp->next!=NULL)
+      {
+      	temp=temp->next;
+	  }
+	  temp->next=newnode;
+   
+   /////traverse after insertion/////////////
+   temp=head;
+   while(temp!=NULL)
+   {
+   	printf("%d",temp->data);
+   	temp=temp->next;
+   }
+   
+   ////deletion from front/////
+   head=temp;
+   temp->next=head;
+   
+    int temp1=head;
+   while(temp1!=NULL)
+   {
+   	printf("%d",temp1->data);
+   	temp1=temp1->next;
+   }
+   
+   return 0;
+   }
+   
