@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[]={3,1,2,5,6};
+	int n=sizeof(arr)/sizeof(arr[0]);
+	int temp;
+	for(int i=0;i<n-1;i++)
+	{
+		for(int j=i+1;j<n;j++)
+		{
+			if(arr[i]>arr[j]){
+			
+			temp=arr[i];
+			arr[i]=arr[j];
+			arr[j]=temp;
+	}
+		}
+	}
+	
+	cout<<"enter the array \n ";
+	for(int r=0;r<n;r++)
+	{
+		cout<<arr[r]<<endl;
+	}
+	cout<<endl;
+	cout<<endl;
+	int h=n-1;
+	for(int z=0;z<n;z++)
+	{
+		if(arr[h]==arr[z])
+		{
+			cout<<arr[h];
+		}
+		
+		h--;
+	}
+	
+}
